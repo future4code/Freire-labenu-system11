@@ -1,12 +1,13 @@
 import { AddressInfo } from "net";
 import app from "./app";
-import { getAddress } from "./endpoints/getAddress";
-import { getAllAddress } from "./endpoints/getAllAdress";
-import { insertAdress } from "./endpoints/insertAdress";
+import {createStudent} from "./endpoints/estudanteEnd/createStudent"
+
+
 
 
 //INCLUIR OS ENDPOINTS AQUI
-//app.get("/endereco/:cep", getAddress)
+//app.get("/student", getStudents)
+app.post("/student", createStudent)
 //app.post("/user/:cep",insertAdress)
 //app.get("/list", getAllAddress)
 

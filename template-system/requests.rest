@@ -4,7 +4,16 @@ GET http://localhost:3003/endereco/05424150
 post https://cep-labenu.herokuapp.com/user/05424150
 
 ###
-post http://localhost:3003/user/05424150
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "name":"Aluno-Teste",
+    "email":"teste_aluno@gmail.com",
+    "data_nasc":"25/05/1995",
+    "turma_id": "10"
+}
+
 
 ###
 GET http://localhost:3003/list

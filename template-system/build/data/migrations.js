@@ -11,9 +11,9 @@ const createTables = () => connection_1.connection.raw(`
          estado VARCHAR(255) NOT NULL
       );
    `)
-    .then(() => { console.log("Tabelas criadas"); })
+    .then(() => { console.log("Tabela criada"); })
     .catch(printError);
 const closeConnection = () => { connection_1.connection.destroy(); };
 createTables()
-    .then(res => console.log("Banco criado"))
+    .then(() => console.log("Banco pronto!"))
     .finally(closeConnection);
