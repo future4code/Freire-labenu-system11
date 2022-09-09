@@ -6,8 +6,8 @@ import { connection } from "../connection";
 export const selectStudent = async(): Promise <Student[]> => {
     
     const student = await connection("Estudante")
-        .select("estudante.id","estudante.name","estudante.email",
-        "estudante.data_nasc", "estudante.turma_id")
+        .select("Estudante.id","Estudante.name","Estudante.email",
+        "Estudante.data_nasc", "Estudante.turma_id")
 
         return student
 }
