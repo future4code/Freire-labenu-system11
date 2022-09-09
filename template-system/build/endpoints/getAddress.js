@@ -8,26 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAddress = void 0;
-const axios_1 = __importDefault(require("axios"));
 const getAddress = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const cep = req.params.cep;
-        const result = yield axios_1.default.get(`https://viacep.com.br/ws/${cep}/json/`);
-        const address = {
-            logradouro: result.data.logradouro,
-            bairro: result.data.bairro,
-            cidade: result.data.localidade,
-            estado: result.data.uf
-        };
-        res.send(address);
-    }
-    catch (error) {
-        res.status(400).send(error.message);
-    }
 });
 exports.getAddress = getAddress;

@@ -9,16 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const connection_1 = require("./connection");
 function insertAdressDb(adress) {
     return __awaiter(this, void 0, void 0, function* () {
-        const { logradouro, bairro, cidade, estado } = adress;
-        yield (0, connection_1.connection)("adress").insert({
-            logradouro,
-            bairro,
-            cidade,
-            estado
-        });
     });
 }
 exports.default = insertAdressDb;
