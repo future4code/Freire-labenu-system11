@@ -1,5 +1,5 @@
 import { tipageTurma, Team, TurmaBancoDeDados } from "../../types/typeTeam";
-import { connection } from "../Connection";
+import { connection } from "../connection";
 
 export async function insertTurma(turma: Team): Promise<void> {
     const { id, name } = turma;
