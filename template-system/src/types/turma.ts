@@ -1,6 +1,6 @@
-export type Team = {
-    id: string,
-    name: string
+export type Turma = {
+    id:string,
+    nome:string
 }
 
 export type TurmaBancoDeDados = {
