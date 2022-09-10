@@ -12,16 +12,20 @@ Content-Type: application/json
 post https://cep-labenu.herokuapp.com/user/05424150
 
 ###
-POST http://localhost:3003/student
+POST http://localhost:3003/create-student
 Content-Type: application/json
 
 {
-    "name":"Aluno-Teste",
-    "email":"teste_aluno@gmail.com",
-    "data_nasc":"25/05/1995",
-    "turma_id": "10"
+    "name":"Olovaldo Nogueira",
+    "email":"olovaldo_teste@gmail.com",
+    "data_nasc": "1995-12-02",
+    "turma_id": "f2b987b9-8ca4-47dd-8d8b-d1c104527079"
 }
 
 
 ###
 GET http://localhost:3003/list
+
+###
+GET http://localhost:3003/student/testezinho
+

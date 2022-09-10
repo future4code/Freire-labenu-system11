@@ -1,4 +1,4 @@
-import { Student } from "../../types/typeStudent";
+import { Student, typingStudent } from "../../types/typeStudent";
 import { connection } from "../connection";
 
 
@@ -15,10 +15,13 @@ export const selectStudent = async(): Promise <Student[]> => {
 
 
 // função para selecionar os estudantes por nome
-export const getStudentByName = async(name: string): Promise <string> => {
+export async function getStudents(name: string):Promise<Student | undefined> {
+    const result = await connection('Estudante').where({name})
 
-    const [nameStudent] = await connection("estudante")
-        .where({name: name})
-
-        return nameStudent
+    if(result){
+        const typeStudent = typingStudent(result)
+        return typeStudent 
+    } else {
+        return undefined
+    }
 }

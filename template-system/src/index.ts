@@ -1,19 +1,16 @@
 import { AddressInfo } from "net";
 import app from "./app";
 import {createStudent} from "./endpoints/estudanteEnd/createStudent"
-import createTeam from "./endpoints/estudanteEnd/turmaEnd/createTeam";
+import createTeam from "./endpoints/turmaEnd/createTeam";
 import buscarTodosOsDocentes from "./endpoints/docenteEnd/buscarTodosDocentes";
 import criarDocente from "./endpoints/docenteEnd/criarDocente";
 import mudancaDocenteTurma from "./endpoints/docenteEnd/mudancaDocenteTurma";
-
-
+import getStudentsByName from "./endpoints/estudanteEnd/searchStudent"
 
 //INCLUIR OS ENDPOINTS AQUI
-//app.get("/student", getStudents)
-app.post("/student", createStudent)
+app.get("/student/:name", getStudentsByName)
+app.post("/create-student", createStudent)
 app.post("/create-team", createTeam)
-//app.post("/user/:cep",insertAdress)
-//app.get("/list", getAllAddress)
 
 app.post("/criar-docente",criarDocente)
 app.get("/buscar-docentes",buscarTodosOsDocentes)

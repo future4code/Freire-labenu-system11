@@ -2,12 +2,16 @@ import { Student } from "../../types/typeStudent";
 import { connection } from "../connection";
 
 // Essa função está inserindo um estudante na tabela "Estudante"
-export const insertStudent = async (student: Student): Promise<void> => {
-    await connection("Estudante").insert({
-      id: student.id,
-      name: student.name,
-      email: student.email,
-      data_nasc: student.data_nasc,
-      turma_id: student.turma_id
+export async function insertStudent(student: Student): Promise<void>{
+    
+  const {id, name, email, data_nasc, turma_id} = student;
+
+  await connection("Estudante").insert({
+      id,
+      name,
+      email,
+      data_nasc: data_nasc,
+      turma_id: turma_id
     });
   };
+

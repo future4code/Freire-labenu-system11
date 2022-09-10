@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import { Team } from "../../../types/typeTeam";
+import { Team } from "../../types/typeTeam";
 import {v4 as uuidv4} from 'uuid';
-import { insertTurma } from "../../../data/teamQuery/teamDataBase";
+import { insertTurma } from "../../data/teamQuery/teamDataBase";
+
 
 export default async function createTeam (req: Request, res: Response) {
     try{
