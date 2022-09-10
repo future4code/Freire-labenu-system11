@@ -1,4 +1,4 @@
-import { connection } from "./connection"
+import { connection } from "./Connection"
 const printError = (error: any) => { console.log(error.sqlMessage || error.message) }
 
 const createTables = () => connection.raw(`

@@ -1,5 +1,5 @@
 import { Student } from "../../types/typeStudent";
-import { connection } from "../connection";
+import { connection } from "../Connection";
 
 // Essa função está inserindo um estudante na tabela "Estudante"
 export const insertStudent = async (student: Student): Promise<void> => {

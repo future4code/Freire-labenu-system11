@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Team } from "../../../types/typeTeam";
 import {v4 as uuidv4} from 'uuid';
-import { insertTeam } from "../../../data/teamQuery/teamDataBase";
+import { insertTurma } from "../../../data/teamQuery/teamDataBase";
 
 export default async function createTeam (req: Request, res: Response) {
     try{
@@ -16,7 +16,7 @@ export default async function createTeam (req: Request, res: Response) {
             name
         } 
 
-        await insertTeam(newTeam)
+        await insertTurma(newTeam)
 
 
         res.status(201).send({message: "Turma criada com sucesso!"})
