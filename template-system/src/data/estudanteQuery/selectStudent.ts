@@ -1,5 +1,5 @@
 import { Student } from "../../types/typeStudent";
-import { connection } from "../Connection";
+import { connection } from "../connection";
 
 
 // função para selecionar todos os estudantes

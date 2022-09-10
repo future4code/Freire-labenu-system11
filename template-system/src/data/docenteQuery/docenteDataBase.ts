@@ -1,5 +1,5 @@
 import { Docente, tipagemDocente } from "../../types/docente";
-import { connection } from "../Connection";
+import { connection } from "../connection";
 
 export async function insertDocente(docente: Docente): Promise<void> {
     const { id, nome, email, dataNascimento, turmaId } = docente;
