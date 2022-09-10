@@ -1,4 +1,12 @@
 GET http://localhost:3003/endereco/05424150
+###
+
+POST http://localhost:3003/create-team
+Content-Type: application/json
+
+{
+    "name": "teste"
+}
 
 ###
 post https://cep-labenu.herokuapp.com/user/05424150
