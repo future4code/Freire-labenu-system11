@@ -1,6 +1,7 @@
 import { AddressInfo } from "net";
 import app from "./app";
 import {createStudent} from "./endpoints/estudanteEnd/createStudent"
+import createTeam from "./endpoints/estudanteEnd/turmaEnd/createTeam";
 
 
 
@@ -8,6 +9,7 @@ import {createStudent} from "./endpoints/estudanteEnd/createStudent"
 //INCLUIR OS ENDPOINTS AQUI
 //app.get("/student", getStudents)
 app.post("/student", createStudent)
+app.post("/create-team", createTeam)
 //app.post("/user/:cep",insertAdress)
 //app.get("/list", getAllAddress)
 
