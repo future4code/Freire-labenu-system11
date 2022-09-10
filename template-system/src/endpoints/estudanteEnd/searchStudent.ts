@@ -8,6 +8,7 @@ export default async function getStudentsByName(req: Request, res: Response) {
     try{
         const name = req.params.name
         console.log(name)
+        
         const studentName = await getStudents(name)
 
 

@@ -16,7 +16,8 @@ export const selectStudent = async(): Promise <Student[]> => {
 
 // função para selecionar os estudantes por nome
 export async function getStudents(name: string):Promise<Student | undefined> {
-    const result = await connection('Estudante').where({name})
+    
+    const [result] = await connection('Estudante').where({name})
 
     if(result){
         const typeStudent = typingStudent(result)
